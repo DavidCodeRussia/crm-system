@@ -1,0 +1,79 @@
+.item {
+  line-height: 16px;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: inherit;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  transition-duration: 0.4s;
+
+  button {
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+    color: #05387b;
+    display: flex;
+    align-items: center;
+    padding: 10px 14px;
+    min-height: 48px;
+
+    .text {
+      flex-grow: 1;
+      text-align: left;
+      font-weight: bold;
+    }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 12px;
+      position: relative;
+    }
+
+    .counter {
+      position: absolute;
+      top: -6px;
+      right: -6px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: #f25c5c;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 10px;
+    }
+
+    .arrow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 24px;
+      height: 24px;
+
+      svg {
+        transition-duration: 0.4s;
+      }
+    }
+  }
+
+  &.open {
+    .arrow svg {
+      transform: rotate(90deg);
+    }
+  }
+
+  &.active {
+    border: 1px solid #0f56b3;
+    button {
+      color: #0f56b3;
+    }
+  }
+
+  &:hover {
+    background-color: #f5faff;
+    border: 1px solid #87abd9;
+  }
+}

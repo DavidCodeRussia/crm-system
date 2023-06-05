@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 import {
   Route,
   RouterProvider,
   createBrowserRouter,
   createRoutesFromElements,
-} from "react-router-dom";
-import "./App.scss";
-import ErrorPage from "./components/universal/ErrorPage";
-import { Layot } from "./components/universal/Layot";
-import { NewsPage } from "./pages/NewsPage";
+} from 'react-router-dom';
+import './App.scss';
+import ErrorPage from './components/ErrorPage';
+import { Layot } from './components/Layot';
+import { NewsPage } from './pages/NewsPage';
 
 function App() {
   const router = createBrowserRouter(

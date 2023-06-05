@@ -1,0 +1,13 @@
+export { ReactComponent as ArrowLocation } from './arrow_location.svg';
+export { ReactComponent as Calendar } from './calendar.svg';
+export { ReactComponent as Exit } from './exit.svg';
+export { ReactComponent as HomePhone } from './home_phone.svg';
+export { ReactComponent as House } from './house.svg';
+export { ReactComponent as Key } from './key.svg';
+export { ReactComponent as PersonInCircle } from './person_in_circle.svg';
+export { ReactComponent as Person } from './person.svg';
+export { ReactComponent as Search } from './search.svg';
+export { ReactComponent as Settings } from './settings.svg';
+export { ReactComponent as Tables } from './tables.svg';
+export { ReactComponent as TV } from './tv.svg';
+export { ReactComponent as SmallArrow } from './smal_arrow.svg';
