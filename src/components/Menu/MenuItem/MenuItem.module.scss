@@ -1,67 +1,65 @@
 .item {
+  position: relative;
   cursor: pointer;
   box-sizing: border-box;
-  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
 
   a {
     display: flex;
     text-decoration: none;
     align-items: center;
+    justify-content: start;
   }
 }
 
 .outer {
   a {
-    font-weight: bold;
-    color: #05387b;
+    font-weight: 600;
     background-color: inherit;
-    min-height: 48px;
+    min-height: 24px;
     padding: 10px 14px;
     border: 1px solid transparent;
-    border-radius: 12px;
+    border-radius: 4px;
     transition-duration: 0.4s;
 
-    &[class*='active'] {
-      border: 1px solid #0f56b3;
-      color: #0f56b3;
+    &[class*="active"] {
+      color: $black_color;
     }
 
     &:hover {
-      background-color: #f5faff;
-      border: 1px solid #f5faff;
+      background-color: $main_background_light_color;
+      color: $white_color;
+      border: 1px solid $main_border_light_color;
     }
   }
 
   .icon {
-    width: 20px;
-    height: 20px;
+    width: 32px;
+    height: 32px;
     margin-right: 12px;
     position: relative;
+    color: $black_color;
   }
 }
 
-.inner {
-  padding: 0px 6px;
-  a {
-    color: #8f95b2;
-    padding: 5px 4px 5px 10px;
-    font-weight: normal;
-    transition-duration: 0.4s;
+.child {
+  margin-left: 41px;
+}
 
-    &[class*='active'] {
-      background-color: #f5faff;
-      border: none;
-      color: #0f56b3;
-    }
+.flexWrap {
+  flex-wrap: nowrap;
+}
 
-    &:hover {
-      color: #0f56b3;
-    }
-  }
+.stick {
+  width: 6px;
+  height: 54px;
+  color: $main_color;
+  background-color: $main_background_color;
+  border-radius: 5px;
+  float: right;
 
-  .icon {
-    width: 14px;
-    height: 14px;
-    margin-right: 8px;
-  }
+  position: absolute;
+  right: -3px;
+  top: 0;
 }

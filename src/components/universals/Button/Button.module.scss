@@ -1,0 +1,15 @@
+.addressSearchField {
+  width: 100%;
+  min-height: 70px;
+  color: $white_color;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    color: $white_color;
+    margin-right: 15px;
+  }
+}

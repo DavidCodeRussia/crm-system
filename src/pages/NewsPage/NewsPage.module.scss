@@ -1,0 +1,25 @@
+.newsPage {
+  &Wrapper {
+    padding: 32px;
+  }
+  &Title {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 123%;
+    padding-bottom: 16px;
+  }
+  &Info {
+    height: 815px;
+    overflow-y: auto;
+  }
+  &Body {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+
+    a {
+      color: #002bc5;
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.appHeader {
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  min-height: 48px;
+  background-color: $main_background_color;
+}
+
+.appTitle {
+  display: flex;
+  align-items: center;
+  color: $white_color;
+  font-weight: 700;
+  cursor: pointer;
+
+  svg {
+    margin-right: 24px;
+  }
+}
+
+.appUserInfo {
+  display: flex;
+  align-items: center;
+  color: $white_color;
+  font-weight: 700;
+
+  svg {
+    cursor: pointer;
+    margin-right: 16px;
+  }
+}

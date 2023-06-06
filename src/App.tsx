@@ -1,14 +1,15 @@
-import React from 'react';
+import React from "react";
 import {
   Route,
   RouterProvider,
   createBrowserRouter,
   createRoutesFromElements,
-} from 'react-router-dom';
-import './App.scss';
-import ErrorPage from './components/ErrorPage';
-import { Layot } from './components/Layot';
-import { NewsPage } from './pages/NewsPage';
+} from "react-router-dom";
+import "./App.scss";
+import ErrorPage from "./components/ErrorPage";
+import { Layot } from "./components/Layot";
+import { SearchAddressPage } from "./pages/SearchAddress";
+import { NewsPage } from "./pages/NewsPage";
 
 function App() {
   const router = createBrowserRouter(
@@ -16,7 +17,8 @@ function App() {
       <>
         <Route path="/" element={<Layot />}>
           <Route errorElement={<ErrorPage />}>
-            <Route path="news" element={<NewsPage />} />
+            <Route index element={<NewsPage />} />
+            <Route path="address" element={<SearchAddressPage />} />
           </Route>
         </Route>
       </>,

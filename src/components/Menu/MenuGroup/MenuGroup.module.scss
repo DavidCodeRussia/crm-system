@@ -1,79 +1,97 @@
 .item {
+  cursor: pointer;
   line-height: 16px;
-  text-decoration: none;
   font-weight: bold;
+  text-decoration: none;
   background-color: inherit;
-  border-radius: 12px;
-  border: 1px solid transparent;
+  border-radius: 4px;
   transition-duration: 0.4s;
 
-  button {
-    cursor: pointer;
-    font-size: 14px;
-    width: 100%;
-    color: #05387b;
+  .wrapperButton {
+    position: relative;
+    overflow: hidden;
     display: flex;
-    align-items: center;
     padding: 10px 14px;
-    min-height: 48px;
-
-    .text {
-      flex-grow: 1;
-      text-align: left;
-      font-weight: bold;
-    }
-
-    .icon {
-      width: 20px;
-      height: 20px;
-      margin-right: 12px;
-      position: relative;
-    }
-
-    .counter {
-      position: absolute;
-      top: -6px;
-      right: -6px;
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      background-color: #f25c5c;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #ffffff;
-      font-weight: bold;
-      font-size: 10px;
-    }
+    margin-bottom: 10px;
 
     .arrow {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 24px;
-      height: 24px;
+      width: 15px;
+      height: 15px;
+      margin-top: 9px;
+      transform: rotate(180deg);
+    }
+
+    svg {
+      color: $background_light_gray_color;
+      transition-duration: 0.4s;
+      align-self: center;
+    }
+
+    &:hover {
+      background-color: $main_background_light_color;
+      color: $white_color;
+      border-radius: 4px;
+      transition-duration: 0.4s;
 
       svg {
-        transition-duration: 0.4s;
+        color: $white_color;
       }
+    }
+  }
+
+  button {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+
+    min-height: 24px;
+
+    .text {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 120%;
+      cursor: pointer;
+    }
+
+    .text:hover {
+      color: $white_color;
+    }
+
+    .icon {
+      width: 32px;
+      height: 32px;
+      margin-right: 12px;
+      cursor: pointer;
     }
   }
 
   &.open {
     .arrow svg {
-      transform: rotate(90deg);
+      transform: rotate(180deg);
     }
   }
+}
 
-  &.active {
-    border: 1px solid #0f56b3;
-    button {
-      color: #0f56b3;
-    }
-  }
+.stick {
+  width: 6px;
+  height: 54px;
+  color: $main_color;
+  background-color: $main_background_color;
+  border-radius: 5px;
+  float: right;
 
-  &:hover {
-    background-color: #f5faff;
-    border: 1px solid #87abd9;
-  }
+  position: absolute;
+  right: -3px;
+  top: 0;
+}
+
+.innerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }

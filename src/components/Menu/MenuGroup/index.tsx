@@ -1,9 +1,9 @@
-import cn from 'classnames';
-import { useMatch } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import * as svg from '@assets/svg';
-import s from './MenuGroup.module.scss';
-import { TMenuGroupProps } from './types';
+import cn from "classnames";
+import { useMatch } from "react-router-dom";
+import { useState, useEffect } from "react";
+import * as svg from "@assets/svg";
+import s from "./MenuGroup.module.scss";
+import { TMenuGroupProps } from "./types";
 
 export const MenuGroup: React.FC<TMenuGroupProps> = ({
   pathMatch,
@@ -11,6 +11,7 @@ export const MenuGroup: React.FC<TMenuGroupProps> = ({
   text,
   icon,
   children,
+  isActive = true,
 }) => {
   const isMatch = !!useMatch(`/${pathMatch}/*`);
   const [isOpen, setIsOpen] = useState(isMatch);
@@ -22,12 +23,20 @@ export const MenuGroup: React.FC<TMenuGroupProps> = ({
   }, [isMatch, location]);
 
   return (
-    <li className={cn(s.item, { [s.open]: isOpen, [s.active]: isMatch })}>
-      <button type="button" onClick={toggleItemOpen}>
-        <span className={s.icon}>{icon}</span>
-        <span className={s.text}>{text}</span>
+    <li
+      className={cn(s.item, {
+        [s.open]: isOpen,
+        [s.active]: isMatch,
+      })}>
+      <div className={s.wrapperButton} onClick={toggleItemOpen}>
+        <button type="button">
+          <span className={s.icon}>{icon}</span>
+          <span className={s.text}>{text}</span>
+        </button>
         <span className={s.arrow}>{<svg.SmallArrow />}</span>
-      </button>
+        {isActive && <span className={s.stick}></span>}
+      </div>
+
       {isOpen && <ul className={s.innerContainer}>{children}</ul>}
     </li>
   );
