@@ -9,8 +9,8 @@ export const Menu = () => {
     <nav className={s.menu}>
       <ul className={s.list}>
         <li className={s.listTitle}>Меню</li>
-        <MenuItem icon={<svg.House />} text="Главная" />
-        <MenuItem icon={<svg.Search />} text="Поиск адресов" />
+        <MenuItem path="/" icon={<svg.House />} text="Главная" />
+        <MenuItem path="/address" icon={<svg.Search />} text="Поиск адресов" />
         <MenuItem icon={<svg.Tables />} text="Таблицы" />
         <MenuItem icon={<svg.Calendar />} text="Календарь" />
         <MenuItem icon={<svg.ArrowLocation />} text="Карты" />

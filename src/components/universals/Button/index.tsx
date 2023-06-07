@@ -5,7 +5,7 @@ import { TButtonProps } from "./types";
 export const Button: React.FC<TButtonProps> = ({ icon, text, backgroundColor, onClick }) => {
   return (
     <div
-      className={s.addressSearchField}
+      className={s.addressSearchButton}
       onClick={onClick}
       style={{
         backgroundColor: backgroundColor,

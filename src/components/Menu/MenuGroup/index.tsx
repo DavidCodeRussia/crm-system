@@ -11,7 +11,6 @@ export const MenuGroup: React.FC<TMenuGroupProps> = ({
   text,
   icon,
   children,
-  isActive = true,
 }) => {
   const isMatch = !!useMatch(`/${pathMatch}/*`);
   const [isOpen, setIsOpen] = useState(isMatch);
@@ -34,7 +33,7 @@ export const MenuGroup: React.FC<TMenuGroupProps> = ({
           <span className={s.text}>{text}</span>
         </button>
         <span className={s.arrow}>{<svg.SmallArrow />}</span>
-        {isActive && <span className={s.stick}></span>}
+        {isMatch && <span className={s.stick}></span>}
       </div>
 
       {isOpen && <ul className={s.innerContainer}>{children}</ul>}

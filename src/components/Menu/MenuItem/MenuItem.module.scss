@@ -22,10 +22,7 @@
     border: 1px solid transparent;
     border-radius: 4px;
     transition-duration: 0.4s;
-
-    &[class*="active"] {
-      color: $black_color;
-    }
+    color: $some_dark_color;
 
     &:hover {
       background-color: $main_background_light_color;
@@ -49,6 +46,10 @@
 
 .flexWrap {
   flex-wrap: nowrap;
+}
+
+.blockClick {
+  pointer-events: none;
 }
 
 .stick {

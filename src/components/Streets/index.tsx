@@ -14,7 +14,7 @@ export const Streets: React.FC<TStreetsProps> = ({ streets }) => {
               className={cn(s.streetsItem, {
                 [s.streetsItemBorder]: streets?.length - 1 !== key,
               })}>
-              улица пушкина дом калатушкина
+              {item.unrestricted_value}
             </div>
           );
         })}

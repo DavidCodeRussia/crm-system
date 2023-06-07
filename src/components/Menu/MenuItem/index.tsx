@@ -1,21 +1,24 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useMatch } from "react-router-dom";
+import { TMenuItemProps } from "./types";
 import cn from "classnames";
 import s from "./MenuItem.module.scss";
-import { TMenuItemProps } from "./types";
 
 export const MenuItem: React.FC<TMenuItemProps> = ({
-  path = "/",
+  path = "",
   icon,
   text,
   flexWrap = true,
   isChild = false,
-  isActive = true,
 }) => {
+  const match = useMatch(path);
+
+  let isActive = path === match?.pathname;
   return (
     <li
       className={cn(s.item, s.outer, {
         [s.flexWrap]: flexWrap === true,
         [s.child]: isChild === true,
+        [s.blockClick]: path === "",
       })}>
       <NavLink to={path}>
         <span className={s.icon}>{icon}</span>

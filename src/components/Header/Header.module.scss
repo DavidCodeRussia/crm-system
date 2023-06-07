@@ -1,8 +1,15 @@
 .appHeader {
-  padding: 16px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.appHeaderInner {
+  padding: 16px 0;
   display: flex;
   justify-content: space-between;
   min-height: 48px;
+  width: 100%;
   background-color: $main_background_color;
 }
 
@@ -12,9 +19,14 @@
   color: $white_color;
   font-weight: 700;
   cursor: pointer;
+  padding-left: 32px;
 
   svg {
     margin-right: 24px;
+  }
+
+  @media (max-width: 468px) {
+    display: none;
   }
 }
 
@@ -23,9 +35,43 @@
   align-items: center;
   color: $white_color;
   font-weight: 700;
+  gap: 16px;
+  padding-right: 32px;
 
   svg {
     cursor: pointer;
-    margin-right: 16px;
+  }
+
+  @media (max-width: 468px) {
+    width: 100%;
+    justify-content: space-between;
+
+    svg {
+      padding-left: 32px;
+    }
+  }
+}
+
+.appBurgerMenu {
+  display: none;
+  margin-left: auto;
+  height: auto;
+  max-height: 40px;
+
+  img {
+    max-width: 32px;
+    max-height: 25px;
+  }
+
+  &Links {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    display: block;
   }
 }

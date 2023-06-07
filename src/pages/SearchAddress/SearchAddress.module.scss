@@ -1,8 +1,12 @@
 .address {
   &Wrapper {
-    color: #000;
+    color: $black_color;
     padding: 32px 32px 0 32px;
     width: 82%;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
   &Title {
     font-weight: 700;
@@ -21,12 +25,48 @@
     display: flex;
     gap: 24px;
     margin-bottom: 32px;
+
+    @media (max-width: 768px) {
+      gap: 12px;
+    }
   }
   &SearchField {
-    min-width: auto;
     width: 74%;
+    overflow: hidden;
+
+    input {
+      width: 96%;
+      min-width: 34%;
+
+      @media (max-width: 1168px) {
+        width: 93%;
+      }
+
+      @media (max-width: 768px) {
+        width: 90%;
+      }
+
+      @media (max-width: 568px) {
+        width: 84%;
+      }
+
+      @media (max-width: 468px) {
+        width: 80%;
+      }
+    }
   }
   &SearchButton {
     width: 23%;
+
+    @media (max-width: 568px) {
+      div {
+        svg {
+          margin: 0;
+        }
+        div {
+          display: none;
+        }
+      }
+    }
   }
 }
